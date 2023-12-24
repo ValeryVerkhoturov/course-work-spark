@@ -19,7 +19,7 @@ class SparkGraphFrames:
         self.filtered_users = self.spark.sql(
             "SELECT * FROM global_temp.users WHERE user_reported_location LIKE '%Россия%'")
         vertices = self.filtered_users.select('userid').toDF('id')
-        edges = self.filtered_users.select('userid', 'tweetid').toDF('src', 'dst') // tweet to reply
+        edges = self.filtered_users.select('userid', 'in_reply_to_userid').toDF('src', 'dst')
         edges = edges.filter(edges.dst != 'null')
         self.gf = GraphFrame(vertices, edges)
 
