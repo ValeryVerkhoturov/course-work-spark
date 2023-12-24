@@ -1,0 +1,37 @@
+% !TeX program = xelatex
+% !TeX encoding = UTF-8
+% !TeX root = abdullin.tex
+
+% Command to compile document
+% xelatex -synctex=1 -interaction=nonstopmode abdullin.tex
+
+% Document class repo 
+% https://github.com/ValeryVerkhoturov/mirea-kb2-programming-languages
+
+\documentclass{mirea}
+
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{float}
+
+
+\usepackage{hyperref}
+\hypersetup{pdftitle={Курсовая работа 7 семестр Организация обработки больших данных}}
+
+\newcommand{\studentname}{Р.\,Р.\,Абдуллин}
+
+\usepackage{graphicx}
+
+\usepackage{listings}
+\usepackage{xcolor}
+\lstset{basicstyle=\footnotesize, breaklines=true, numbers=left, captionpos=t, showstringspaces=false, commentstyle=\color{teal}, stringstyle=\color{red}, keywordstyle=\color{violet}}  % Настройки, применяемые ко всем листингам
+
+\usepackage{caption}
+\captionsetup[lstlisting]{justification=raggedright, singlelinecheck=false}
+
+
+\begin{document}
+	
+	\input{common.tex}
+	
+\end{document}
